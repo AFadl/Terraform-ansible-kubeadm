@@ -15,7 +15,6 @@ Assumption:
 2- This script uses the default security group for default VPC.
 
 
-
 Regarding installing kubectl locally, I used "local-exec" resource provisioner and it works fine, I did not include it in my script because it is working only "Ubuntu" and I did not want the script to have dependencies. here is the part of script that was changed to achieve this
 
 provisioner "local-exec" {
