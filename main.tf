@@ -75,5 +75,14 @@ resource "aws_security_group_rule" "allow_ssh" {
   security_group_id = "${data.aws_security_group.default.id}"
 }
 
+	#Adding rule to security group
+resource "aws_security_group_rule" "kube_access" {
+  type        = "ingress"
+  from_port   = 6443
+  to_port     = 6443
+  protocol    = "tcp"
+  cidr_blocks = ["${chomp(data.http.myip.body)}/32"]
+  security_group_id = "${data.aws_security_group.default.id}"
+}
 
 
