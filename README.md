@@ -28,7 +28,10 @@ sudo apt-get update
 sudo apt-get install -y kubectl
 ansible-playbook -u ubuntu --private-key ${var.ssh_key_name} -i ${self.public_ip}, site.yml
 EOT
-} 
+}  
+
+Then configure kubectl to connect to the remote cluster by downloading .kube folder usig scp command from user home directory to my local user home directory
+
 
 Here are some improvements that can be done if needed.
 ------------------------------------------------------
