@@ -33,5 +33,6 @@ Here are some improvements that can be done if needed.
 Improvements:
 
 1- Create a new VPC in the selected region and create the EC2 instance in this VPC.
+
 2- Create a new security group, attach it to created instance and add rule(s) to this security group.
 
